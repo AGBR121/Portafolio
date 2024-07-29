@@ -13,8 +13,8 @@ import { useInView } from 'react-intersection-observer';
 // Componente para el efecto de desvanecimiento
 const FadeInOut = ({ children }) => {
   const { ref, inView } = useInView({
-    triggerOnce: false,  // No queremos que se dispare solo una vez
-    threshold: 0.1       // Cuando el 10% del elemento es visible
+    triggerOnce: false, 
+    threshold: 0.1   
   });
 
   return (
@@ -26,8 +26,6 @@ const FadeInOut = ({ children }) => {
     </div>
   );
 };
-
-// Componente principal de la página
 const HomePage = () => {
   const [text, setText] = React.useState('');
   const [isTypingFinished, setIsTypingFinished] = React.useState(false);
@@ -40,9 +38,9 @@ const HomePage = () => {
       index++;
       if (index === fullText.length) {
         clearInterval(timer);
-        setIsTypingFinished(true); // Marca el texto como escrito
+        setIsTypingFinished(true); 
       }
-    }, 300); // Ajustar la velocidad del efecto de escritura aquí
+    }, 300);
     return () => clearInterval(timer);
   }, [fullText]);
 

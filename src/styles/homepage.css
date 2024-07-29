@@ -1,5 +1,3 @@
-/* src/styles/homepage.css */
-
 .home-container {
   font-family: Arial, sans-serif;
   color: #e0e0e0;
@@ -14,10 +12,10 @@
   text-align: center;
   padding: 2rem;
   position: relative;
-  display: flex; /* Usa flexbox para centrar el contenido */
-  flex-direction: column; /* Alinea los elementos en columna */
-  align-items: center; /* Centra horizontalmente */
-  box-sizing: border-box; /* Asegura que el padding no cause overflow */
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  box-sizing: border-box; 
 }
 
 .profile-container {
@@ -35,13 +33,13 @@
 
 .home-header h1 {
   font-size: 3rem;
-  margin: 0; /* Asegura que no haya margen */
+  margin: 0; 
   color: #e74c3c;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 2px solid #e74c3c; /* La barra de escritura */
+  border-right: 2px solid #e74c3c;
   animation: blink-caret 0.75s step-end infinite;
-  box-sizing: border-box; /* Asegura que el border-right no cause overflow */
+  box-sizing: border-box;
 }
 
 .home-header h1.typing {
@@ -49,7 +47,7 @@
 }
 
 .home-header h1.finished {
-  border-right: none; /* Oculta la barra de escritura cuando termina la animación */
+  border-right: none;
 }
 
 .home-header p {
@@ -98,7 +96,6 @@
   margin: 0 auto;
 }
 
-/* Sección de proyectos */
 .projects {
   padding: 2rem;
   background-color: #1e1e1e;
@@ -126,19 +123,19 @@
   width: 300px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para el efecto hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .project-item:hover {
-  transform: translateY(-10px); /* Mueve la tarjeta hacia arriba */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta la sombra para el efecto de elevación */
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
 }
 
 .project-item img {
-  width: 100%; /* Hace que la imagen ocupe el ancho completo de la tarjeta */
+  width: 100%;
   height: auto;
-  border-radius: 0.25rem; /* Redondea las esquinas de la imagen */
-  margin-bottom: 0.5rem; /* Espacio debajo de la imagen */
+  border-radius: 0.25rem; 
+  margin-bottom: 0.5rem; 
 }
 
 .project-item h3 {
@@ -173,7 +170,6 @@
   50% { border-color: #e74c3c; }
 }
 
-/* Efecto de desvanecimiento */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
