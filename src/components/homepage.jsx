@@ -1,12 +1,12 @@
 import React from 'react';
 import '../styles/homepage.css'; 
 import profilePicture from '../assets/Angel_Burbano_Foto.jpg';
-import picture from '../assets/imagen1.jpg'
-import picture2 from '../assets/imagen2.jpg'
-import picture3 from '../assets/imagen3.jpg'
-import picture4 from '../assets/imagen4.jpg'
-import picture5 from '../assets/imagen5.jpg'
-import picture6 from '../assets/imagen6.jpg'
+import picture from '../assets/imagen1.jpg';
+import picture2 from '../assets/imagen2.jpg';
+import picture3 from '../assets/imagen3.jpg';
+import picture4 from '../assets/imagen4.jpg';
+import picture5 from '../assets/imagen5.jpg';
+import picture6 from '../assets/imagen6.jpg';
 
 import { useInView } from 'react-intersection-observer';
 
@@ -30,6 +30,7 @@ const FadeInOut = ({ children }) => {
 // Componente principal de la página
 const HomePage = () => {
   const [text, setText] = React.useState('');
+  const [isTypingFinished, setIsTypingFinished] = React.useState(false);
   const fullText = 'AGBR121';
   
   React.useEffect(() => {
@@ -37,15 +38,18 @@ const HomePage = () => {
     const timer = setInterval(() => {
       setText(fullText.slice(0, index + 1));
       index++;
-      if (index === fullText.length) clearInterval(timer);
-    }, 150); // Ajustar la velocidad del efecto de escritura aquí
+      if (index === fullText.length) {
+        clearInterval(timer);
+        setIsTypingFinished(true); // Marca el texto como escrito
+      }
+    }, 300); // Ajustar la velocidad del efecto de escritura aquí
     return () => clearInterval(timer);
   }, [fullText]);
 
   return (
     <div className="home-container">
       <header className="home-header">
-        <h1 className="typing-effect">{text}</h1>
+        <h1 className={isTypingFinished ? 'finished' : 'typing'}>{text}</h1>
         <div className="profile-container">
           <img 
             src={profilePicture} 
