@@ -29,11 +29,16 @@
   border: 5px solid #e74c3c;
   object-fit: cover;
   display: inline-block;
+  transition: box-shadow 0.3s ease;
+}
+
+.profile-picture:hover {
+  box-shadow: 0 0 15px 5px rgba(231, 76, 60, 0.8);
 }
 
 .home-header h1 {
   font-size: 3rem;
-  margin: 0; 
+  margin: 0;
   color: #e74c3c;
   overflow: hidden;
   white-space: nowrap;
@@ -123,19 +128,19 @@
   width: 300px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-item:hover {
   transform: translateY(-10px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
 }
 
 .project-item img {
   width: 100%;
   height: auto;
-  border-radius: 0.25rem; 
-  margin-bottom: 0.5rem; 
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .project-item h3 {
@@ -159,7 +164,6 @@
   text-decoration: underline;
 }
 
-/* Animaciones */
 @keyframes typing {
   from { width: 0; }
   to { width: 100%; }
