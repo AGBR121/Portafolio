@@ -10,7 +10,6 @@ import picture6 from '../assets/imagen6.jpg';
 
 import { useInView } from 'react-intersection-observer';
 
-// Componente para el efecto de desvanecimiento
 const FadeInOut = ({ children }) => {
   const { ref, inView } = useInView({
     triggerOnce: false, 
