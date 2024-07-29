@@ -47,6 +47,7 @@ const HomePage = () => {
     <div className="home-container">
       <header className="home-header">
         <h1 className={isTypingFinished ? 'finished' : 'typing'}>{text}</h1>
+        <br></br>
         <div className="profile-container">
           <img 
             src={profilePicture} 
