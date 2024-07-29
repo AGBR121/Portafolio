@@ -1,0 +1,184 @@
+/* src/styles/homepage.css */
+
+.home-container {
+  font-family: Arial, sans-serif;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+}
+
+.home-header {
+  background-color: #1e1e1e;
+  color: #e74c3c;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.profile-container {
+  margin-bottom: 1rem;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #e74c3c;
+  object-fit: cover;
+  display: inline-block;
+}
+
+.home-header h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: #e74c3c;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #e74c3c;
+  animation: typing 2.5s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+.home-header p {
+  font-size: 1.25rem;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.contact-buttons {
+  margin-top: 1rem;
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: #121212;
+  background-color: #e74c3c;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  margin: 0.5rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-button:hover {
+  background-color: #c0392b;
+  color: #e0e0e0;
+}
+
+.about-me {
+  padding: 2rem;
+  background-color: #1e1e1e;
+  text-align: center;
+}
+
+.about-me h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #e74c3c;
+}
+
+.about-me p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Sección de proyectos */
+.projects {
+  padding: 2rem;
+  background-color: #1e1e1e;
+}
+
+.projects h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #e74c3c;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.project-item {
+  background-color: #333;
+  border: 1px solid #444;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para el efecto hover */
+}
+
+.project-item:hover {
+  transform: translateY(-10px); /* Mueve la tarjeta hacia arriba */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta la sombra para el efecto de elevación */
+}
+
+.project-item img {
+  width: 100%; /* Hace que la imagen ocupe el ancho completo de la tarjeta */
+  height: auto;
+  border-radius: 0.25rem; /* Redondea las esquinas de la imagen */
+  margin-bottom: 0.5rem; /* Espacio debajo de la imagen */
+}
+
+.project-item h3 {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
+  color: #e74c3c;
+}
+
+.project-item p {
+  font-size: 1rem;
+  margin: 0 0 1rem;
+}
+
+.project-item a {
+  color: #e74c3c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-item a:hover {
+  text-decoration: underline;
+}
+
+/* Animaciones */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #e74c3c; }
+}
+
+/* Efecto de desvanecimiento */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-out {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease-in, transform 0.6s ease-in;
+}
+
+.fade-out.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
