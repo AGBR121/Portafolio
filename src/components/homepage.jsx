@@ -79,7 +79,7 @@ const HomePage = () => {
         <FadeInOut>
           <h2>About Me</h2>
           <p>
-            I'm Angel Burbano, a young systems engineer candidate and fullstack developer passionate about learning and improving. I like programming and chess. 
+            I'm Angel Burbano, a young computer science candidate and fullstack developer passionate about learning and improving. I like programming and chess. 
             I spend part of my free time learning more and expanding my knowledge in programming and chess.
             My dream is to travel the world while doing what I am most passionate about.
           </p>
